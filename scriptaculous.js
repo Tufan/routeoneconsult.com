@@ -43,5 +43,3 @@ var Scriptaculous = {
 }
 
 Scriptaculous.load();
-
-}

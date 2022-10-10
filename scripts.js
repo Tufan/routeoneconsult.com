@@ -111,5 +111,3 @@ if (CurrentYear<100) CurrentYear="19" + CurrentYear;
 TheDate += CurrentYear;
 document.write(' '+TheDate);
 }
-
-}
