@@ -1,0 +1,57 @@
+#column3 {
+	width:200px;
+	float: left;
+	padding-left:20px
+	}	
+
+.menu ul {
+	margin-top:0px;
+	list-style:none
+	}
+	
+h1 {
+	font-size: 1.3em;
+	line-height:1.5em
+	}
+
+a {
+	display: inline
+	}
+
+#footer {
+	margin: 20px auto;
+	}
+
+.thumbnail {
+	float:left;
+	margin: 4px;
+	}
+
+#content #column2 li {
+	list-style:url(../_images/bullet2ie.gif)
+	}
+
+#content li li p {
+	margin:-5px 0 0 0px;
+	}
+	
+#content #column2 li {
+	margin:0 0 1em 30px;
+	list-style:url(../_images/bullet2.gif) outside
+	}
+
+#sitemap #content #column2 li {
+	margin:0;
+	list-style-image:none;
+	background-image:none
+	}
+
+#sitemap #content #column2 li li {
+	margin:0;
+	list-style-image:none;
+	background-image:none
+	}
+
+.button {
+	margin:0 0 -3px 7px
+	}	

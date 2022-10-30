@@ -1,0 +1,139 @@
+/********************* H T M L *********************/
+
+* { margin:0; padding:0; }
+html { height: 100%; margin-bottom: 1px }
+body { font: 0.7em Geneva, Arial, Helvetica, sans-serif; background: url(../_images/bg-footer.gif); color: #666666; line-height: 1.5em; }
+#content p { margin:0 0 1em 0; line-height: 2em; }
+#content li li { margin:0; line-height: 1em; clear:both }
+#content li li p { margin:-5px 0 0 -20px; }
+hr { display:none; }
+td { padding:6px; }
+a { color:#666666; text-decoration:none; font-weight:bold }
+a:hover { color:#6DB43F; text-decoration: none; }
+#column2 a { color:#6DB43F; }
+#column2 a:hover { color:#6DB43F; text-decoration:underline }
+#column2 a { color:#6DB43F; }
+#column2 .readmore a { color:#fff; }
+#column2 .readmore a:hover { text-decoration: none; color:#fff }
+a img { border:none; }
+h1 { font-weight: bold; font-size: 1.5em; color: #666666; margin: 0 0 1em 0; line-height: normal; }
+h2 { font-weight: bold; font-size: 1.2em; color:#666666; line-height: 1.1em; margin: 0 0 1em 0; }
+#column2 h2 { font-weight: bold; font-size: 1em; color:#6DB43F; line-height: 1.8em; margin: 0 0 1em 0; }
+.strapline h2 { color:#333333; position: absolute; right: 40px; top: 24px; font-size:1.8em; font-style:italic; letter-spacing: 0.05em; font-weight: lighter; }
+#column3 h2 { background: url(../_images/bg-h2.gif) no-repeat top left; font-size: 1.1em; height: 20px; padding: 3px 0 0 10px; margin-left:-20px; margin-bottom: .5em; }
+#column3 ul { margin-bottom:1em; }
+h3 { font-weight:lighter; font-size: 1.3em; margin: 0 0 1em 0; color: #666666; line-height: 1.3em; }
+label { left:-30000px; position:absolute; }
+legend { display:none; }
+fieldset { border:none; margin:0; padding:0; }
+#column3 li { list-style:url(../_images/bullet.gif); }
+
+strong { font-weight:bold !important; }
+
+/********************* L A Y O U T *********************/
+
+#wrapper { margin:0 auto; position: relative; background: #fff url(../_images/bg-body.jpg) repeat-x; padding: 10px 0 20px 0; }
+	.widePage #content { background:url(../_images/bg-content-wide.gif) repeat-y center; }
+
+
+#hidden { display:none }
+#header { width:950px; margin: 0 auto; height: 84px; }
+.logo { float: left; }
+#date { float:right; padding-right:1em; }
+.tel { float:right; padding-left:1em; border-left:solid 1px #ccc }
+#banner { height:186px; clear: both; }
+#back a { background:url(../_images/back1.gif) no-repeat; height: 17px; width: 17px; position: absolute; right: 0px; display:block }
+#back a:hover { background:url(../_images/back2.gif) no-repeat; }
+#home #banner { background:url(../_images/banner-home.jpg) top center no-repeat; }
+#our-services #banner { background:url(../_images/banner03_.jpg) top center no-repeat; }
+#clients-and-testimonials #banner { background:url(../_images/banner04.jpg) top center no-repeat; }
+#contact-us #banner { background:url(../_images/banner05.jpg) top center no-repeat; }
+#news-and-events #banner { background:url(../_images/banner06.jpg) top center no-repeat; }
+#recruitment #banner { background:url(../_images/banner07.jpg) top center no-repeat; }
+#tools-and-resources #banner { background:url(../_images/banner08.jpg) top center no-repeat; }
+#case-studies #banner { background:url(../_images/banner09.jpg) top center no-repeat; }
+#project-management #banner { background:url(../_images/banner10.jpg) top center no-repeat; }
+#party-walls #banner { background:url(../_images/banner11.jpg) top center no-repeat; }
+#other-services #banner { background:url(../_images/banner12.jpg) top center no-repeat; }
+#measured-survey #banner { background:url(../_images/banner13.jpg) top center no-repeat; }
+#dilapidations #banner { background:url(../_images/banner14.jpg) top center no-repeat; }
+#defects-analysis #banner { background:url(../_images/banner15.jpg) top center no-repeat; }
+#building-surveys #banner { background:url(../_images/banner17.jpg) top center no-repeat; }
+#sitemap #banner { background:url(../_images/banner-home.jpg) top center no-repeat; }
+.strapline { width:950px; margin:0 auto; padding: 20px 0; position: relative; }
+#content { width:950px; background:url(../_images/bg-content.gif) repeat-y center; margin: 0px auto; position: relative; }
+#content:after { content:" "; display:block; clear:both; }
+#content li { margin:0 0 5px 15px; line-height:1.7em; }
+#content #column2 li { margin:0 0 1em 30px; list-style:url(../_images/bullet2.gif) outside }
+#sitemap #content #column2 li { margin:0 0 1em 30px; list-style:none }
+#sitemap #content #column2 li li { margin:0 0 1em 30px; list-style:url(../_images/bullet2.gif) outside }
+.thumbnail { float:left; margin: 0 12px 20px 0; }
+#column3 .thumbnail { float:none; margin: 6px 0; }
+.thumbnail a img { border:solid 4px #ccc; }
+.thumbnail a:hover img { border:solid 4px #6DB43F; }
+#content .description p { line-height:1.2em; }
+/********************* M E N U *********************/
+
+
+.menu ul { margin-top:-4px; }
+.menu li { list-style:none; text-align:right; }
+.menu a { font-size:1.2em; font-weight: bold; padding:0 17px 0 0; border-right:solid 4px #ccc; display:block }
+.menu a:hover { border-right:solid 4px #6DB43F; text-decoration:none; color:#6DB43F; background:#f0f0f0; }
+#home .menu #active-home a, #our-services .menu #active-our-services a { border-right:solid 4px #6DB43F; text-decoration:none; color:#6DB43F }
+/********************* F O O T E R *********************/
+
+
+#footer-wrapper { clear:both; width:100%; background:url(../_images/bg-footer-shadow.gif) repeat-x top; height:150px; padding-top:10px }
+#footer { width:950px; margin: 10px auto; line-height:1.2em }
+.foot-left { width:186px; float:left; text-align:right; color:#FFFFFF; font-weight:bold }
+.foot-left p { margin:0; }
+.foot-right { width:45%; float:right; text-align: right; }
+#footer a { color:#fff; text-decoration:none; font-weight:normal }
+#footer a:hover { text-decoration: underline; }
+#footer li { list-style:none; margin-top:6px }
+#footer p { margin:0 0 2em 0 }
+/********************* F O R M S *********************/
+	
+.formfield { border:solid 1px #999999; font-size: 1em; padding:1px; color:#666666 }
+.foot-right form { padding:0 }
+.foot-right .formfield { padding:3px; }
+.button { margin:0 0 -8px 7px }
+input.formfield { font-size:1em; padding:3px 2px 2px 4px; border:solid 4px #ccc }
+input.formfield:focus { border:solid 4px #6DB43F; }
+/********************* COLUMN 1 *********************/
+
+#column1 { width:200px; float: left; }
+/********************* COLUMN 2 *********************/
+
+#column2 { width:490px; float: left; margin: 0 20px; position: relative; }
+.widePage #column2 { width:730px; float: right; margin: 0; position: relative; }
+
+div.readmore a { background:url(../_images/greenbutton.gif) no-repeat left; width:206px; height: 20px; color:#FFFFFF; text-align:right; padding:0 6px 0 0; float:right }
+div.readmore a:hover { background:url(../_images/graybutton.gif) no-repeat left; text-decoration:none; color: #FFFFFF; }
+/********************* COLUMN 3 *********************/
+
+#column3 { width:200px; float: right; }
+/********************* Vx *********************/
+
+div.leftimage { float:left; margin-right: 10px; }
+div.righttext { min-height:110px }
+/********************* tinyMCE *********************/
+	
+body.mceContentBody { background-image: none; background-color: #FFFFFF; color: #666666; }
+body.mceContentBody p { background-image: none; background-color: #FFFFFF; color: #666666; }
+body.mceContentBody h1 { background-image: none; background-color: #FFFFFF; color: #666666; }
+body.mceContentBody h2 { background-image: none; background-color: #FFFFFF; color: #666666; }
+body.mceContentBody h3 { background-image: none; background-color: #FFFFFF; color: #666666; }
+body.mceContentBody a:link { color: #666666 !important; text-decoration: underline; }
+body.mceContentBody a:visited { color: #666666 !important; text-decoration: underline; }
+body.mceContentBody a:hover { color: #006699 !important; text-decoration: none; }
+body.mceContentBody a:active { color: #006699 !important; text-decoration: none; }
+
+
+.twtr-ft a { display:block !important; float:none !important; text-align:left !important; }
+.twtr-ft span { display:block !important; float:none !important; text-align:left !important; padding-top:10px !important; }
+
+.clientLogo { float:left !important; margin:15px 30px 0 0; }
+#clients-and-testimonials .clientLogo { float:left !important; clear:none !important; }
+
+.vx_block { float:none !important; display:block !important; clear:both !important; }
