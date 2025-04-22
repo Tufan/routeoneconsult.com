@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Route One Building Consultancy</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="tufan.co.uk">
+    <meta name="description" content="Route One Building Consultancy">
+
+
+    <!-- Dark mode -->
+    <script>
+        const storedTheme = localStorage.getItem('theme')
+
+        const getPreferredTheme = () => {
+            if (storedTheme) {
+                return storedTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+        }
+
+        const setTheme = function (theme) {
+            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme', theme)
+            }
+        }
+
+        setTheme(getPreferredTheme())
+
+        window.addEventListener('DOMContentLoaded', () => {
+            var el = document.querySelector('.theme-icon-active');
+            if (el != 'undefined' && el != null) {
+                const showActiveTheme = theme => {
+                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                        element.classList.remove('active')
+                    })
+
+                    btnToActive.classList.add('active')
+                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+                }
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+                        setTheme(getPreferredTheme())
+                    }
+                })
+
+                showActiveTheme(getPreferredTheme())
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', () => {
+                            const theme = toggle.getAttribute('data-bs-theme-value')
+                            localStorage.setItem('theme', theme)
+                            setTheme(theme)
+                            showActiveTheme(theme)
+                        })
+                    })
+
+            }
+        })
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <style>
+        body {
+            font-family: Nunito !important;
+        }
+
+        h6,
+        .h6,
+        h5,
+        .h5,
+        h4,
+        .h4,
+        h3,
+        .h3,
+        h2,
+        .h2,
+        h1,
+        .h1 {
+            font-family: "Instrument Sans", sans-serif;
+
+        }
+
+        .nav-link {
+            font-weight: 700;
+            font-size: 1.2rem;
+
+        }
+
+        .dropdown-item {
+            font-weight: 700;
+
+        }
+
+        .dropdown-header {
+            font-family: Nunito !important;
+            font-weight: 700;
+            font-size: 1rem;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header START -->
+    <header class="header-sticky header-absolute" data-bs-theme="dark">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand-xl px-lg-5">
+            <div class="container-fluid">
+                <!-- Logo START -->
+                <a class="navbar-brand me-5" href="index.html">
+                    <img class="light-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo"
+                        style="height:100px">
+                    <img class="dark-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo"
+                        style="height:100px">
+                </a>
+                <!-- Logo END -->
+
+                <!-- Main navbar START -->
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll dropdown-hover">
+
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+
+                        <!-- Nav item -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
+                                data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="services-overview.html">Services Overview</a></li>
+                                <!-- Dropdown divider -->
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li> <a class="dropdown-item" href="project-management.html">Project Management</a></li>
+                                <li> <a class="dropdown-item" href="dilapidations.html">Dilapidations</a></li>
+                                <li> <a class="dropdown-item" href="defects-analysis.html">Defects Analysis</a></li>
+                                <li> <a class="dropdown-item" href="building-surveys.html">Buildings Surveys</a></li>
+                                <li> <a class="dropdown-item" href="party-walls.html">Party Walls</a></li>
+                                <li> <a class="dropdown-item" href="measured-survey.html">Measured Survey</a></li>
+                                <li> <a class="dropdown-item" href="project-monitoring.html">Project Monitoring</a></li>
+                                <li> <a class="dropdown-item" href="other-services.html">Other Services</a></li>
+                                <!-- Dropdown divider -->
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li> <a class="dropdown-item" href="specialist-services.html">Specialist Services</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="clients.html">Clients</a> </li>
+
+                        <!-- Nav item -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Case Studies</a>
+                            <div class="dropdown-menu dropdown-menu-center dropdown-menu-size-lg p-3">
+                                <div class="row g-xl-3">
+                                    <!-- Work -->
+                                    <div class="col-xl-7 d-none d-xl-block">
+                                        <div class="d-flex gap-4">
+                                            <!-- Card -->
+                                            <div class="card bg-transparent">
+                                                <!-- Image -->
+                                                <img src="assets/images/portfolio/list/02.jpg" class="card-img" alt="">
+                                                <!-- Card body -->
+                                                <div class="card-body px-0 text-start pb-0">
+                                                    <h6><a href="#">Featured Case Study</a></h6>
+                                                    <p class="mb-2 small">Project Management</p>
+                                                    <a class="icon-link icon-link-hover stretched-link mb-0"
+                                                        href="#">Learn more<i class="bi bi-arrow-right"></i> </a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Divider line -->
+                                            <div class="vr ms-2"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Index nav links -->
+                                    <div class="col-xl-5">
+                                        <ul class="list-unstyled">
+                                            <li class="dropdown-header"><strong>Case Studies</strong></li>
+                                            <li> <a class="dropdown-item" href="case-study-1.html">Case Study 1</a>
+                                            </li>
+                                            <li> <a class="dropdown-item" href="#">Case Study 2</a> </li>
+                                            <li> <a class="dropdown-item" href="#">Case Study 3</a> </li>
+                                            <li> <a class="dropdown-item" href="#">Case Study 4</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Nav item -->
+                        <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact us</a> </li>
+                    </ul>
+                </div>
+                <!-- Main navbar END -->
+
+                <!-- Buttons -->
+                <ul class="nav align-items-center dropdown-hover ms-sm-2">
+
+
+
+
+
+
+                    <!-- Responsive navbar toggler -->
+                    <li class="nav-item">
+                        <button class="navbar-toggler ms-3 p-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>
+    <!-- Header END -->
+
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+
+        <!-- =======================
+Main hero START -->
+        <section class="bg-dark pt-lg-9 pb-4" data-bs-theme="dark">
+            <div class="container position-relative pt-4 pt-lg-0">
+                <div class="row align-items-center">
+                    <!-- Title -->
+                    <div class="col-md-7 col-xl-6 mb-6 mb-md-0">
+                        <span
+                            class="bg-primary bg-opacity-10 text-primary text-uppercase rounded small px-3 py-2">Services</span>
+                        <h1 class="h2 my-4">Measured Survey and Schedules of Condition</h1>
+                        <p class="mb-7"><span class="text-primary"><strong>
+                            We are involved in the arrangement of measured surveys in conjunction with, or independent of other project work or due diligence instructions.
+                                </strong></span><br /><br />
+                                Route One understands the importance of accurately recording the condition of properties in order that necessary protection can be afforded to landlords and tenants alike particularly in respect of agreeing leases.
+                            <br /><br />
+                            Technical drawing using the latest Autocad software whether in connection with project fit-out works, lease plans and statutory compliance documentation is effectively managed in house to enhance the Route One service.
+                        </p>
+
+
+
+
+                    </div>
+
+                    <div class="col-md-4 position-relative ms-auto mb-xl-n5">
+                        <!-- SVG decoration -->
+                        <figure class="position-absolute bottom-0 end-0 z-index-1 mb-n6 me-n6 d-none d-lg-block">
+                            <svg width="167" height="107" viewBox="0 0 167 107" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-white" clip-rule="evenodd"
+                                    d="M87.1132 1.04286L87.1128 1.04337C86.6896 1.55271 86.2787 2.04727 85.826 2.5C84.8049 3.40765 83.7918 4.32334 82.78 5.23795L82.7799 5.23803L82.7798 5.23811L82.7796 5.23823C80.2242 7.54807 77.6764 9.85101 75.026 12C61.626 22.5 48.226 33 34.926 43.5L9.12598 63.9L9.12586 63.9001C8.7259 64.2001 8.32595 64.5 8.02598 64.8C7.32598 65.4 6.52598 65.8 5.62598 65C4.82598 64.3 5.02598 63.3 5.52598 62.6C6.12598 61.6 6.92598 60.6 7.72598 59.8C8.20935 59.3606 8.69271 58.919 9.17671 58.4769L9.17678 58.4768L9.17686 58.4767L9.17698 58.4766C11.9972 55.9003 14.8387 53.3044 17.826 51C39.426 34.4 61.126 17.9 83.626 2.5C84.826 1.6 86.126 0.8 87.426 0C87.426 0 87.526 0.1 87.826 0.2C87.5789 0.482421 87.3442 0.764841 87.1132 1.04286ZM166.026 21.9C165.676 22.1 165.326 22.325 164.976 22.55C164.626 22.775 164.276 23 163.926 23.2C149.326 31.8 134.926 40.7 120.826 50.2C99.226 64.6 77.826 79.4 57.426 95.4C53.626 98.4 49.926 101.4 46.226 104.4C45.626 104.9 45.126 105.3 44.526 105.7C43.726 106.3 42.926 106.6 42.126 105.9C41.326 105.2 41.526 104.2 42.026 103.5C42.626 102.5 43.326 101.5 44.226 100.7L44.3458 100.59C46.8091 98.3235 49.3691 95.9681 52.026 94C82.426 71 113.626 49.5 146.926 31C150.726 28.8667 154.615 26.9111 158.504 24.9556C160.448 23.9778 162.393 23 164.326 22C164.826 21.8 165.326 21.6 165.726 21.4C165.826 21.5 165.926 21.7 166.026 21.9ZM99.926 8.5C100.626 8 101.226 7.4 101.826 6.8C101.726 6.7 101.626 6.6 101.326 6.5C100.626 7 99.926 7.525 99.226 8.05C98.526 8.575 97.826 9.1 97.126 9.6C93.0918 12.5088 89.0545 15.4176 85.0158 18.3275L85.0151 18.328C65.7284 32.224 46.4088 46.1436 27.226 60.2C21.8311 64.1042 16.7385 68.3108 11.6263 72.5336L11.6262 72.5336C9.53676 74.2595 7.44401 75.9882 5.32601 77.7C3.82601 78.9 2.52601 80.3 1.22601 81.7C0.726013 82.2 0.226013 82.8 0.026013 83.5C-0.073987 84 0.126013 84.7 0.426013 85C0.726013 85.3 1.52601 85.4 1.92601 85.2C2.72601 84.8 3.42601 84.3 4.12601 83.7C6.54336 81.7156 8.93467 79.7052 11.3234 77.6969C15.5554 74.139 19.7794 70.5878 24.126 67.2C34.7347 58.9552 45.3766 50.8101 56.0135 42.669L56.0143 42.6684L56.015 42.6678C63.8265 36.6891 71.6352 30.7125 79.426 24.7C86.3253 19.3005 93.1247 13.9011 99.924 8.50163L99.926 8.5ZM100.426 22C99.326 23 98.226 24 97.026 24.9C93.6956 27.4851 90.3598 30.0703 87.0224 32.6567L87.015 32.6624C76.0246 41.1795 65.0165 49.7104 54.126 58.3C47.6804 63.3921 41.3179 68.5672 34.9849 73.7183C31.4926 76.5588 28.0093 79.3921 24.526 82.2L24.526 82.2001C23.726 82.9 22.926 83.6 22.026 84.1C21.526 84.4 20.426 84.4 20.126 84.1C19.726 83.7 19.626 82.7 19.926 82.2C20.326 81.4 20.926 80.6 21.626 79.9C22.3148 79.2686 22.9953 78.629 23.6771 77.9883L23.6772 77.9882C25.3709 76.3963 27.0722 74.7973 28.926 73.3C48.926 57.5 69.126 42 90.226 27.7C92.5211 26.1427 94.9505 24.5853 97.2941 23.083L97.2943 23.0828C97.8098 22.7524 98.3212 22.4246 98.826 22.1C99.226 21.9 99.626 21.7 100.026 21.4C100.102 21.5146 100.164 21.6 100.217 21.6729L100.217 21.673C100.302 21.791 100.364 21.8764 100.426 22ZM107.355 35.4442C107.542 35.2315 107.732 35.0157 107.926 34.8C107.626 34.6 107.526 34.5 107.526 34.5L107.526 34.5001C106.026 35.6001 104.526 36.7 103.026 37.7C86.326 48.8 70.226 60.7 54.326 72.8C49.6261 76.2999 45.0262 79.8999 40.4262 83.4998L40.426 83.5C39.526 84.2 38.726 85 38.026 85.8C37.426 86.5 37.126 87.4 37.826 88.2C38.526 89.1 39.426 89 40.226 88.5C41.326 87.9 42.426 87.2 43.426 86.4C45.176 85 46.901 83.575 48.626 82.15C50.351 80.725 52.076 79.3 53.826 77.9C65.926 68.4 78.126 58.9 90.326 49.5L105.326 37.5C106.032 36.951 106.676 36.2175 107.355 35.4442Z">
+                                </path>
+                            </svg>
+                        </figure>
+
+                        <!-- Image -->
+                        <img src="https://dummyimage.com/800x600/f8f8f8/333" class="rounded position-relative zindex-2"
+                            alt="feature-img">
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =======================
+Main hero END -->
+
+        <!-- ======================= START -->
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row g-4 g-lg-7">
+                    <!-- Our Approach -->
+                    <div class="col-md-6">
+                        <h4 class="mb-4"></h4>
+
+                    </div>
+
+                    <!-- Service benefits -->
+                    <div class="col-md-6">
+                        <div class="card card-body bg-light border p-md-5">
+                            <h4 class="mb-3">Related Case Studies</h4>
+
+                            <!-- List -->
+                            <ul class="list-group list-group-borderless border-0">
+                                <li class="list-group-item heading-color d-flex mb-0"><i class="bi bi-patch-check text-primary me-2"></i> <a href="#">Jack Wills - Edinburgh</a></li>
+						<li class="list-group-item heading-color d-flex mb-0"><i class="bi bi-patch-check text-primary me-2"></i> <a href="#l">LaSalle Investment Management - Bolton</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =======================  END -->
+
+
+
+
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+
+
+
+    <!-- =======================
+Footer START -->
+    <footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
+
+        <div class="container position-relative mt-5">
+            <!-- Widgets -->
+            <div class="row g-4">
+
+
+                <!-- Widget START -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <h6 class="mb-2 mb-md-4">Services</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Project Management</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Dilapidations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Defects Analysis</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Building Surveys</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Party Walls</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Measured Surveys</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Project Monitoring</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Other Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Specalist Services</a></li>
+
+                    </ul>
+                </div>
+                <!-- Widget END -->
+
+                <!-- Widget START -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <h6 class="mb-2 mb-md-4">Clients</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Client Testimonials</a></li>
+                    </ul>
+                </div>
+                <!-- Widget END -->
+
+                <!-- Widget START -->
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <h6 class="mb-2 mb-md-4">Case Studies</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#">Case Study 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Case Study 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Case Study 3</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Case Study 4</a></li>
+                    </ul>
+                </div>
+                <!-- Widget END -->
+            </div>
+
+            <!-- Divider -->
+            <hr class="opacity-1 my-5 my-sm-6">
+
+            <!-- Contact detail -->
+            <div class="row g-4 align-items-center">
+                <!-- Title -->
+                <div class="col-xl-3 text-lg-center text-xl-start mb-4 mb-xl-0">
+                    <h5 class="mb-1">Contact Us</h5>
+                    <p class="mb-0">We look forward to hearing from you</p>
+                </div>
+
+                <!-- Mobile number -->
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+                    <div class="position-relative d-flex align-items-center">
+                        <div class="icon-lg bg-body rounded-circle flex-shrink-0">
+                            <i class="bi bi-telephone heading-color"></i>
+                        </div>
+                        <div class="nav flex-column ps-3">
+                            <div class="small text-body-secondary">Give us a call</div>
+                            <p class="fw-semibold mt-1 mb-0"><a href="#"
+                                    class="heading-color text-primary-hover stretched-link p-0">+44 (0)207 828 5904</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+                    <div class="position-relative d-flex align-items-center">
+                        <div class="icon-lg bg-body rounded-circle flex-shrink-0">
+                            <i class="bi bi-envelope heading-color"></i>
+                        </div>
+                        <div class="nav flex-column ps-3">
+                            <div class="small text-body-secondary">Send us an email</div>
+                            <p class="fw-semibold mt-1 mb-0"><a href="#"
+                                    class="heading-color text-primary-hover stretched-link p-0">info@routeoneconsult.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+                    <div class="position-relative d-flex align-items-center">
+                        <div class="icon-lg bg-body rounded-circle flex-shrink-0">
+                            <i class="bi bi-geo-alt heading-color"></i>
+                        </div>
+                        <div class="nav flex-column ps-3">
+                            <div class="small text-body-secondary">Visit us at</div>
+                            <p class="fw-semibold heading-color mt-1 mb-0">19 Park Street<br />Croydon CR0 1YD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="opacity-1 mt-6 mb-0">
+
+            <!-- Bottom footer -->
+            <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
+                <!-- copyright text -->
+                <div class="text-body mb-3 mb-md-0"> Copyright ©2025 Route One Building Consultancy Ltd</div>
+
+                <!-- Social links -->
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+                                class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+                                class="fab fa-fw fa-instagram lh-base"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+                                class="fab fa-fw fa-twitter lh-base"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+                                class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
+                    <li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+                                class="fab fa-fw fa-youtube lh-base"></i></a> </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <!-- =======================
+Footer END -->
+
+    <!-- Back to top -->
+    <div class="back-top"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Vendors -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+    <!-- Theme Functions -->
+    <script src="assets/js/functions.js"></script>
+
+</body>
+
+</html>
