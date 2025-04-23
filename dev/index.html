@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 	<title>Route One Building Consultancy</title>
@@ -13,7 +14,7 @@
 	<!-- Dark mode -->
 	<script>
 		const storedTheme = localStorage.getItem('theme')
- 
+
 		const getPreferredTheme = () => {
 			if (storedTheme) {
 				return storedTheme
@@ -32,42 +33,42 @@
 		setTheme(getPreferredTheme())
 
 		window.addEventListener('DOMContentLoaded', () => {
-		    var el = document.querySelector('.theme-icon-active');
-			if(el != 'undefined' && el != null) {
+			var el = document.querySelector('.theme-icon-active');
+			if (el != 'undefined' && el != null) {
 				const showActiveTheme = theme => {
-				const activeThemeIcon = document.querySelector('.theme-icon-active use')
-				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+					const activeThemeIcon = document.querySelector('.theme-icon-active use')
+					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-					element.classList.remove('active')
-				})
-
-				btnToActive.classList.add('active')
-				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-			}
-
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-				if (storedTheme !== 'light' || storedTheme !== 'dark') {
-					setTheme(getPreferredTheme())
-				}
-			})
-
-			showActiveTheme(getPreferredTheme())
-
-			document.querySelectorAll('[data-bs-theme-value]')
-				.forEach(toggle => {
-					toggle.addEventListener('click', () => {
-						const theme = toggle.getAttribute('data-bs-theme-value')
-						localStorage.setItem('theme', theme)
-						setTheme(theme)
-						showActiveTheme(theme)
+					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+						element.classList.remove('active')
 					})
+
+					btnToActive.classList.add('active')
+					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+				}
+
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+					if (storedTheme !== 'light' || storedTheme !== 'dark') {
+						setTheme(getPreferredTheme())
+					}
 				})
+
+				showActiveTheme(getPreferredTheme())
+
+				document.querySelectorAll('[data-bs-theme-value]')
+					.forEach(toggle => {
+						toggle.addEventListener('click', () => {
+							const theme = toggle.getAttribute('data-bs-theme-value')
+							localStorage.setItem('theme', theme)
+							setTheme(theme)
+							showActiveTheme(theme)
+						})
+					})
 
 			}
 		})
-		
+
 	</script>
 
 	<!-- Favicon -->
@@ -76,183 +77,162 @@
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lato:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+		rel="stylesheet">
 
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
-	
+
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	
+
 	<style>
-        body {
-            font-family: Nunito !important;
-        }
-		
-		h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-				font-family: "Instrument Sans", sans-serif;
+		body {
+			font-family: Nunito !important;
+		}
+
+		h6,
+		.h6,
+		h5,
+		.h5,
+		h4,
+		.h4,
+		h3,
+		.h3,
+		h2,
+		.h2,
+		h1,
+		.h1 {
+			font-family: "Instrument Sans", sans-serif;
 
 		}
-		
+
 		.nav-link {
 			font-weight: 700;
-			 font-size: 1.2rem;
-  
+			font-size: 1.2rem;
+
 		}
-		
+
 		.dropdown-item {
-		font-weight: 700;
-  
+			font-weight: 700;
+
 		}
-		
+
 		.dropdown-header {
-		font-family: Nunito !important;
-		font-weight: 700;
-		font-size: 1rem;
-  
+			font-family: Nunito !important;
+			font-weight: 700;
+			font-size: 1rem;
+
 		}
-		
 	</style>
-	
+
 
 </head>
 
 <body>
 
-<!-- Header START -->
-<header class="header-sticky header-absolute" data-bs-theme="dark">
-	<!-- Logo Nav START -->
-	<nav class="navbar navbar-expand-xl px-lg-5">
-		<div class="container-fluid">
-			<!-- Logo START -->
-			<a class="navbar-brand me-5" href="index.html">
-				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo" style="height:100px">
-				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo" style="height:100px">
-			</a>
-			<!-- Logo END -->
+	<!-- Header START -->
+	<header class="header-sticky header-absolute" data-bs-theme="dark">
+		<!-- Logo Nav START -->
+		<nav class="navbar navbar-expand-xl px-lg-5">
+			<div class="container-fluid">
+				<!-- Logo START -->
+				<a class="navbar-brand me-5" href="index.html">
+					<img class="light-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo"
+						style="height:100px">
+					<img class="dark-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo"
+						style="height:100px">
+				</a>
+				<!-- Logo END -->
 
-			<!-- Main navbar START -->
-			<div class="navbar-collapse collapse" id="navbarCollapse">
-				<ul class="navbar-nav navbar-nav-scroll dropdown-hover">
+				<!-- Main navbar START -->
+				<div class="navbar-collapse collapse" id="navbarCollapse">
+					<ul class="navbar-nav navbar-nav-scroll dropdown-hover">
 
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link active" href="index.html">Home</a> </li>
-					
-					
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link active" href="index.html">Home</a> </li>
 
-					 <!-- Nav item -->
-					 <li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-							data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Services</a>
-						<ul class="dropdown-menu">
-							<li> <a class="dropdown-item" href="services-overview.html">Services Overview</a></li>
-							<!-- Dropdown divider -->
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li> <a class="dropdown-item" href="project-management.html">Project Management</a></li>
-							<li> <a class="dropdown-item" href="dilapidations.html">Dilapidations</a></li>
-							<li> <a class="dropdown-item" href="defects-analysis.html">Defects Analysis</a></li>
-							<li> <a class="dropdown-item" href="building-surveys.html">Buildings Surveys</a></li>
-							<li> <a class="dropdown-item" href="party-walls.html">Party Walls</a></li>
-							<li> <a class="dropdown-item" href="measured-survey.html">Measured Survey</a></li>
-							<li> <a class="dropdown-item" href="project-monitoring.html">Project Monitoring</a></li>
-							<li> <a class="dropdown-item" href="other-services.html">Other Services</a></li>
-							<!-- Dropdown divider -->
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li> <a class="dropdown-item" href="specialist-services.html">Specialist Services</a>
-							</li>
-						</ul>
+
+
+						<!-- Nav item -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+								data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Services</a>
+							<ul class="dropdown-menu">
+								<li> <a class="dropdown-item" href="services-overview.html">Services Overview</a></li>
+								<!-- Dropdown divider -->
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li> <a class="dropdown-item" href="project-management.html">Project Management</a></li>
+								<li> <a class="dropdown-item" href="dilapidations.html">Dilapidations</a></li>
+								<li> <a class="dropdown-item" href="defects-analysis.html">Defects Analysis</a></li>
+								<li> <a class="dropdown-item" href="building-surveys.html">Buildings Surveys</a></li>
+								<li> <a class="dropdown-item" href="party-walls.html">Party Walls</a></li>
+								<li> <a class="dropdown-item" href="measured-survey.html">Measured Survey</a></li>
+								<li> <a class="dropdown-item" href="project-monitoring.html">Project Monitoring</a></li>
+								<li> <a class="dropdown-item" href="other-services.html">Other Services</a></li>
+								<!-- Dropdown divider -->
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li> <a class="dropdown-item" href="specialist-services.html">Specialist Services</a>
+								</li>
+							</ul>
+						</li>
+
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link" href="clients.html">Clients</a> </li>
+
+
+
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact us</a> </li>
+					</ul>
+				</div>
+				<!-- Main navbar END -->
+
+				<!-- Buttons -->
+				<ul class="nav align-items-center dropdown-hover ms-sm-2">
+
+
+
+
+
+
+					<!-- Responsive navbar toggler -->
+					<li class="nav-item">
+						<button class="navbar-toggler ms-3 p-2" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-animation">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</button>
 					</li>
-
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link" href="clients.html">Clients</a> </li>
-					
-					
-					<!-- Nav item -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Case Studies</a>
-						<div class="dropdown-menu dropdown-menu-center dropdown-menu-size-lg p-3">
-							<div class="row g-xl-3">
-								<!-- Work -->
-								<div class="col-xl-7 d-none d-xl-block">
-									<div class="d-flex gap-4">
-										<!-- Card -->
-										<div class="card bg-transparent">
-											<!-- Image -->
-											<img src="assets/images/portfolio/list/02.jpg" class="card-img" alt="">
-											<!-- Card body -->
-											<div class="card-body px-0 text-start pb-0">
-												<h6><a href="case-study-1.html">Featured Case Study</a></h6>
-												<p class="mb-2 small">Project Management</p>
-												<a class="icon-link icon-link-hover stretched-link mb-0" href="case-study-1.html">Learn more<i class="bi bi-arrow-right"></i> </a>
-											</div>
-										</div>
-
-										<!-- Divider line -->
-										<div class="vr ms-2"></div>
-									</div>
-								</div>
-
-								<!-- Index nav links -->
-								<div class="col-xl-5">
-									<ul class="list-unstyled">
-										<li class="dropdown-header"><strong>Case Studies</strong></li>
-										<li> <a class="dropdown-item" href="case-study-1.html">Case Study 1</a> </li>
-										<li> <a class="dropdown-item" href="#">Case Study 2</a> </li>
-										<li> <a class="dropdown-item" href="#">Case Study 3</a> </li>
-										<li> <a class="dropdown-item" href="#">Case Study 4</a> </li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact us</a> </li>
 				</ul>
+
 			</div>
-			<!-- Main navbar END -->
+		</nav>
+		<!-- Logo Nav END -->
+	</header>
+	<!-- Header END -->
 
-			<!-- Buttons -->
-			<ul class="nav align-items-center dropdown-hover ms-sm-2">
-			
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
 
-			
-
-				
-
-				<!-- Responsive navbar toggler -->
-				<li class="nav-item">
-					<button class="navbar-toggler ms-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-animation">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</button>
-				</li>	
-			</ul>
-
-		</div>
-	</nav>
-	<!-- Logo Nav END -->
-</header>
-<!-- Header END -->
-
-<!-- **************** MAIN CONTENT START **************** -->
-<main>
-
-<!-- =======================
+		<!-- =======================
 Main Banner START -->
-<section class="pt-0" style="padding-bottom:0px">
-	<!-- Slider START -->
-	<div class="swiper overflow-hidden" data-swiper-options='{
+		<section class="pt-0">
+			<!-- Slider START -->
+			<div class="swiper overflow-hidden" data-swiper-options='{
 		"effect": "fade",
 		"speed":"1000",
 		"autoplay":{
@@ -264,38 +244,78 @@ Main Banner START -->
 			"clickable":"true"
 		}}'>
 
-		<div class="swiper-wrapper">
-		
-			
-			<!-- Slider item -->
-			<div class="swiper-slide">
-				<div class="card overflow-hidden min-vh-100 rounded-0" style="background:url(assets/images/bg/09.jpg) no-repeat; background-size:cover; background-position:center;">
-					<!-- Bg overlay -->
-					<div class="bg-overlay bg-linear-overlay"></div>
-		
-					<!-- Content -->
-					<div class="position-relative z-index-2 d-flex flex-column m-auto h-100 py-9"> 
-						<div class="container">
-							<div class="row">
-								<div class="col-sm-11 col-lg-8 mt-auto">
-									<!-- Title -->
-									<h1 class="text-white display-4 mb-4"><span class="text-primary">Bespoke</span><br /><span class="">Property Services</span></h1>
-									<p class="text-white mb-5"><span class="text-primary"><strong>Route One</strong></span> offers a range of tailored building and property services delivered direct to corporate and individual clients with efficiency and enthusiasm.</p>
-									<a class="btn btn-lg btn-primary icon-link icon-link-hover mb-0" href="services-overview.html">Explore Our Services<i class="bi bi-arrow-right"></i> </a>
+				<div class="swiper-wrapper">
+					<!-- Slider item -->
+					<div class="swiper-slide">
+						<div class="card overflow-hidden min-vh-100 rounded-0"
+							style="background:url(assets/images/bg/09.jpg) no-repeat; background-size:cover; background-position:center;">
+							<!-- Bg overlay -->
+							<div class="bg-overlay bg-linear-overlay"></div>
+
+							<!-- Card image overlay -->
+							<div class="position-relative z-index-2 d-flex flex-column m-auto h-100 py-9">
+								<div class="container">
+									<div class="row">
+										<div class="col-sm-11 col-lg-8 mt-auto">
+											<!-- Title -->
+											<h1 class="text-white display-4 mb-4"><span
+													class="text-primary">Bespoke</span><br /><span class="">Property
+													Services</span></h1>
+											<p class="text-white mb-5"><span class="text-primary"><strong>Route
+														One</strong></span> offers a range of tailored building and
+												property services delivered direct to corporate and individual clients
+												with efficiency and enthusiasm.</p>
+											<a class="btn btn-lg btn-primary icon-link icon-link-hover mb-0"
+												href="services-overview.html">Explore Our Services<i
+													class="bi bi-arrow-right"></i> </a>
+										</div>
+									</div>
 								</div>
 							</div>
+
+
+						</div>
+					</div>
+
+					<!-- Slider item -->
+					<div class="swiper-slide">
+						<div class="card overflow-hidden min-vh-100 rounded-0"
+							style="background:url(assets/images/bg/10.jpg) no-repeat; background-size:cover; background-position:center;">
+							<!-- Bg overlay -->
+							<div class="bg-overlay bg-linear-overlay"></div>
+
+							<!-- Content -->
+							<div class="position-relative z-index-2 d-flex flex-column m-auto h-100 py-9">
+								<div class="container">
+									<div class="row">
+										<div class="col-sm-11 col-lg-8 mt-auto">
+											<!-- Title -->
+											<h1 class="text-white display-4 mb-4"><span
+													class="text-primary">Direct</span><br /><span class="">Property
+													Services</span></h1>
+											<p class="text-white mb-5"><span class="text-primary"><strong>Route
+														One</strong></span> offers a range of tailored building and
+												property services delivered direct to corporate and individual clients
+												with efficiency and enthusiasm.</p>
+											<a class="btn btn-lg btn-primary icon-link icon-link-hover mb-0"
+												href="services-overview.html">Explore Our Services<i
+													class="bi bi-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>	
 
-		<!-- Slider Pagination -->
-		<div class="swiper-pagination swiper-pagination-line position-absolute bottom-0 mb-3"></div>
-	</div>	
-	<!-- Slider END -->
-</section>
-<!-- =======================
+				<!-- Slider Pagination -->
+				<div class="swiper-pagination swiper-pagination-line position-absolute bottom-0 mb-3"></div>
+			</div>
+			<!-- Slider END -->
+		</section>
+		<!-- =======================
 Main Banner END -->
 
 
@@ -307,147 +327,156 @@ Main Banner END -->
 
 
 
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
 
-</main>
-<!-- **************** MAIN CONTENT END **************** -->
-
-<!-- =======================
+	<!-- =======================
 Footer START -->
-<footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
+	<footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
 
-	<div class="container position-relative mt-5">
-		<!-- Widgets -->
-		<div class="row g-4">
-	
+		<div class="container position-relative mt-5">
+			<!-- Widgets -->
+			<div class="row g-4">
 
-			<!-- Widget START -->
-			<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-				<h6 class="mb-2 mb-md-4">Services</h6>
-				<ul class="nav flex-column">
-					<li class="nav-item"><a class="nav-link" href="#">Project Management</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Dilapidations</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Defects Analysis</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Building Surveys</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Party Walls</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Measured Surveys</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Project Monitoring</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Other Services</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Specalist Services</a></li>
-
-				</ul>
-			</div>
-			<!-- Widget END -->
-
-			<!-- Widget START -->
-			<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-				<h6 class="mb-2 mb-md-4">Clients</h6>
-				<ul class="nav flex-column">
-					<li class="nav-item"><a class="nav-link" href="#">Client Testimonials</a></li>
-				</ul>
-			</div>
-			<!-- Widget END -->
 
 				<!-- Widget START -->
-			<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-				<h6 class="mb-2 mb-md-4">Case Studies</h6>
-				<ul class="nav flex-column">
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 1</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 2</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 3</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 4</a></li>
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+					<h6 class="mb-2 mb-md-4">Services</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#">Project Management</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Dilapidations</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Defects Analysis</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Building Surveys</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Party Walls</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Measured Surveys</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Project Monitoring</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Other Services</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Specalist Services</a></li>
+
+					</ul>
+				</div>
+				<!-- Widget END -->
+
+				<!-- Widget START -->
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+					<h6 class="mb-2 mb-md-4">Clients</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#">Client Testimonials</a></li>
+					</ul>
+				</div>
+				<!-- Widget END -->
+
+				<!-- Widget START -->
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+					<h6 class="mb-2 mb-md-4">Case Studies</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 1</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 2</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 3</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 4</a></li>
+					</ul>
+				</div>
+				<!-- Widget END -->
+			</div>
+
+			<!-- Divider -->
+			<hr class="opacity-1 my-5 my-sm-6">
+
+			<!-- Contact detail -->
+			<div class="row g-4 align-items-center">
+				<!-- Title -->
+				<div class="col-xl-3 text-lg-center text-xl-start mb-4 mb-xl-0">
+					<h5 class="mb-1">Contact Us</h5>
+					<p class="mb-0">We look forward to hearing from you</p>
+				</div>
+
+				<!-- Mobile number -->
+				<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+					<div class="position-relative d-flex align-items-center">
+						<div class="icon-lg bg-body rounded-circle flex-shrink-0">
+							<i class="bi bi-telephone heading-color"></i>
+						</div>
+						<div class="nav flex-column ps-3">
+							<div class="small text-body-secondary">Give us a call</div>
+							<p class="fw-semibold mt-1 mb-0"><a href="#"
+									class="heading-color text-primary-hover stretched-link p-0">+44 (0)207 828 5904</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Email -->
+				<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+					<div class="position-relative d-flex align-items-center">
+						<div class="icon-lg bg-body rounded-circle flex-shrink-0">
+							<i class="bi bi-envelope heading-color"></i>
+						</div>
+						<div class="nav flex-column ps-3">
+							<div class="small text-body-secondary">Send us an email</div>
+							<p class="fw-semibold mt-1 mb-0"><a href="#"
+									class="heading-color text-primary-hover stretched-link p-0">info@routeoneconsult.com</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Address -->
+				<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+					<div class="position-relative d-flex align-items-center">
+						<div class="icon-lg bg-body rounded-circle flex-shrink-0">
+							<i class="bi bi-geo-alt heading-color"></i>
+						</div>
+						<div class="nav flex-column ps-3">
+							<div class="small text-body-secondary">Visit us at</div>
+							<p class="fw-semibold heading-color mt-1 mb-0">19 Park Street<br />Croydon CR0 1YD</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Divider -->
+			<hr class="opacity-1 mt-6 mb-0">
+
+			<!-- Bottom footer -->
+			<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
+				<!-- copyright text -->
+				<div class="text-body mb-3 mb-md-0"> Copyright ©2025 Route One Building Consultancy Ltd</div>
+
+				<!-- Social links -->
+				<ul class="list-inline mb-0">
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-instagram lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-twitter lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-youtube lh-base"></i></a> </li>
 				</ul>
 			</div>
-			<!-- Widget END -->
+
 		</div>
-
-		<!-- Divider -->
-		<hr class="opacity-1 my-5 my-sm-6">
-
-		<!-- Contact detail -->
-		<div class="row g-4 align-items-center">
-			<!-- Title -->
-			<div class="col-xl-3 text-lg-center text-xl-start mb-4 mb-xl-0">
-				<h5 class="mb-1">Contact Us</h5>
-				<p class="mb-0">We look forward to hearing from you</p>
-			</div>
-
-			<!-- Mobile number -->
-			<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
-				<div class="position-relative d-flex align-items-center">
-					<div class="icon-lg bg-body rounded-circle flex-shrink-0">
-						<i class="bi bi-telephone heading-color"></i>
-					</div>
-					<div class="nav flex-column ps-3">
-						<div class="small text-body-secondary">Give us a call</div>
-						<p class="fw-semibold mt-1 mb-0"><a href="#" class="heading-color text-primary-hover stretched-link p-0">+44 (0)207 828 5904</a></p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Email -->
-			<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
-				<div class="position-relative d-flex align-items-center">
-					<div class="icon-lg bg-body rounded-circle flex-shrink-0">
-						<i class="bi bi-envelope heading-color"></i>
-					</div>
-					<div class="nav flex-column ps-3">
-						<div class="small text-body-secondary">Send us an email</div>
-						<p class="fw-semibold mt-1 mb-0"><a href="#" class="heading-color text-primary-hover stretched-link p-0">info@routeoneconsult.com</a></p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Address -->
-			<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
-				<div class="position-relative d-flex align-items-center">
-					<div class="icon-lg bg-body rounded-circle flex-shrink-0">
-						<i class="bi bi-geo-alt heading-color"></i>
-					</div>
-					<div class="nav flex-column ps-3">
-						<div class="small text-body-secondary">Visit us at</div>
-						<p class="fw-semibold heading-color mt-1 mb-0">19 Park Street<br />Croydon CR0 1YD</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Divider -->
-		<hr class="opacity-1 mt-6 mb-0">
-
-		<!-- Bottom footer -->
-		<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
-			<!-- copyright text -->
-			<div class="text-body mb-3 mb-md-0"> Copyright ©2025 Route One Building Consultancy Ltd</div>
-
-			<!-- Social links -->
-			<ul class="list-inline mb-0">
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-instagram lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-twitter lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-youtube lh-base"></i></a> </li>
-			</ul>
-		</div>
-		
-	</div>
-</footer>
-<!-- =======================
+	</footer>
+	<!-- =======================
 Footer END -->
 
-<!-- Back to top -->
-<div class="back-top"></div>
+	<!-- Back to top -->
+	<div class="back-top"></div>
 
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<!--Vendors-->
-<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/jarallax/jarallax.min.js"></script>
-<script src="assets/vendor/jarallax/jarallax-video.min.js"></script>
+	<!--Vendors-->
+	<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/jarallax/jarallax.min.js"></script>
+	<script src="assets/vendor/jarallax/jarallax-video.min.js"></script>
 
-<!-- Theme Functions -->
-<script src="assets/js/functions.js"></script>
+	<!-- Theme Functions -->
+	<script src="assets/js/functions.js"></script>
 
 </body>
+
 </html>

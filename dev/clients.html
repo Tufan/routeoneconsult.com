@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 	<title>Route One Building Consultancy</title>
@@ -13,7 +14,7 @@
 	<!-- Dark mode -->
 	<script>
 		const storedTheme = localStorage.getItem('theme')
- 
+
 		const getPreferredTheme = () => {
 			if (storedTheme) {
 				return storedTheme
@@ -32,42 +33,42 @@
 		setTheme('dark')
 
 		window.addEventListener('DOMContentLoaded', () => {
-		    var el = document.querySelector('.theme-icon-active');
-			if(el != 'undefined' && el != null) {
+			var el = document.querySelector('.theme-icon-active');
+			if (el != 'undefined' && el != null) {
 				const showActiveTheme = theme => {
-				const activeThemeIcon = document.querySelector('.theme-icon-active use')
-				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+					const activeThemeIcon = document.querySelector('.theme-icon-active use')
+					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-					element.classList.remove('active')
-				})
-
-				btnToActive.classList.add('active')
-				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-			}
-
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-				if (storedTheme !== 'light' || storedTheme !== 'dark') {
-					setTheme(getPreferredTheme())
-				}
-			})
-
-			showActiveTheme(getPreferredTheme())
-
-			document.querySelectorAll('[data-bs-theme-value]')
-				.forEach(toggle => {
-					toggle.addEventListener('click', () => {
-						const theme = toggle.getAttribute('data-bs-theme-value')
-						localStorage.setItem('theme', theme)
-						setTheme(theme)
-						showActiveTheme(theme)
+					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+						element.classList.remove('active')
 					})
+
+					btnToActive.classList.add('active')
+					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+				}
+
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+					if (storedTheme !== 'light' || storedTheme !== 'dark') {
+						setTheme(getPreferredTheme())
+					}
 				})
+
+				showActiveTheme(getPreferredTheme())
+
+				document.querySelectorAll('[data-bs-theme-value]')
+					.forEach(toggle => {
+						toggle.addEventListener('click', () => {
+							const theme = toggle.getAttribute('data-bs-theme-value')
+							localStorage.setItem('theme', theme)
+							setTheme(theme)
+							showActiveTheme(theme)
+						})
+					})
 
 			}
 		})
-		
+
 	</script>
 
 	<!-- Favicon -->
@@ -76,270 +77,269 @@
 	<!-- Google Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lato:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+		rel="stylesheet">
 
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
-	
+
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	
+
 	<style>
-        body {
-            font-family: Nunito !important;
-        }
-		
-		h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-				font-family: "Instrument Sans", sans-serif;
+		body {
+			font-family: Nunito !important;
+		}
+
+		h6,
+		.h6,
+		h5,
+		.h5,
+		h4,
+		.h4,
+		h3,
+		.h3,
+		h2,
+		.h2,
+		h1,
+		.h1 {
+			font-family: "Instrument Sans", sans-serif;
 
 		}
-		
+
 		.nav-link {
 			font-weight: 700;
-			 font-size: 1.2rem;
-  
+			font-size: 1.2rem;
+
 		}
-		
+
 		.dropdown-item {
-		font-weight: 700;
-  
+			font-weight: 700;
+
 		}
-		
+
 		.dropdown-header {
-		font-family: Nunito !important;
-		font-weight: 700;
-		font-size: 1rem;
-  
+			font-family: Nunito !important;
+			font-weight: 700;
+			font-size: 1rem;
+
 		}
-		
 	</style>
 
 </head>
 
 <body>
 
-<!-- Header START -->
-<header class="header-sticky header-absolute" data-bs-theme="dark">
-	<!-- Logo Nav START -->
-	<nav class="navbar navbar-expand-xl px-lg-5">
-		<div class="container-fluid">
-			<!-- Logo START -->
-			<a class="navbar-brand me-5" href="index.html">
-				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo" style="height:100px">
-				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo" style="height:100px">
-			</a>
-			<!-- Logo END -->
+	<!-- Header START -->
+	<header class="header-sticky header-absolute" data-bs-theme="dark">
+		<!-- Logo Nav START -->
+		<nav class="navbar navbar-expand-xl px-lg-5">
+			<div class="container-fluid">
+				<!-- Logo START -->
+				<a class="navbar-brand me-5" href="index.html">
+					<img class="light-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo"
+						style="height:100px">
+					<img class="dark-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo"
+						style="height:100px">
+				</a>
+				<!-- Logo END -->
 
-			<!-- Main navbar START -->
-			<div class="navbar-collapse collapse" id="navbarCollapse">
-				<ul class="navbar-nav navbar-nav-scroll dropdown-hover">
+				<!-- Main navbar START -->
+				<div class="navbar-collapse collapse" id="navbarCollapse">
+					<ul class="navbar-nav navbar-nav-scroll dropdown-hover">
 
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
-					
-					
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
 
-					<!-- Nav item -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Services</a>
-						<ul class="dropdown-menu">
-							
-							
-							<li> <a class="dropdown-item" href="project-management.html">Project Management</a></li>
-							<li> <a class="dropdown-item" href="#">Dilapidations</a></li>
-							<li> <a class="dropdown-item" href="#">Defects Analysis</a></li>
-							<li> <a class="dropdown-item" href="#">Buildings Surveys</a></li>
-							<li> <a class="dropdown-item" href="#">Party Walls</a></li>
-							<li> <a class="dropdown-item" href="#">Measured Survey</a></li>
-							<li> <a class="dropdown-item" href="#">Project Monitoring</a></li>
-							<li> <a class="dropdown-item" href="#">Other Services</a></li>
-							
 
-							<!-- Dropdown divider -->
-							<li> <hr class="dropdown-divider"></li>
-							
-							<li> <a class="dropdown-item" href="#">Specialist Services</a></li>
-							
-						
-						</ul>
+
+						<!-- Nav item -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+								data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Services</a>
+							<ul class="dropdown-menu">
+								<li> <a class="dropdown-item" href="services-overview.html">Services Overview</a></li>
+								<!-- Dropdown divider -->
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+
+								<li> <a class="dropdown-item" href="project-management.html">Project Management</a></li>
+								<li> <a class="dropdown-item" href="#">Dilapidations</a></li>
+								<li> <a class="dropdown-item" href="#">Defects Analysis</a></li>
+								<li> <a class="dropdown-item" href="#">Buildings Surveys</a></li>
+								<li> <a class="dropdown-item" href="#">Party Walls</a></li>
+								<li> <a class="dropdown-item" href="#">Measured Survey</a></li>
+								<li> <a class="dropdown-item" href="#">Project Monitoring</a></li>
+								<li> <a class="dropdown-item" href="#">Other Services</a></li>
+
+
+								<!-- Dropdown divider -->
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+
+								<li> <a class="dropdown-item" href="#">Specialist Services</a></li>
+
+
+							</ul>
+						</li>
+
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link active" href="clients.html">Clients</a> </li>
+
+
+
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact us</a> </li>
+					</ul>
+				</div>
+				<!-- Main navbar END -->
+
+				<!-- Buttons -->
+				<ul class="nav align-items-center dropdown-hover ms-sm-2">
+
+
+
+
+
+
+					<!-- Responsive navbar toggler -->
+					<li class="nav-item">
+						<button class="navbar-toggler ms-3 p-2" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-animation">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</button>
 					</li>
+				</ul>
 
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link active" href="clients.html">Clients</a> </li>
-					
-					
-					<!-- Nav item -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Case Studies</a>
-						<div class="dropdown-menu dropdown-menu-center dropdown-menu-size-lg p-3">
-							<div class="row g-xl-3">
-								<!-- Work -->
-								<div class="col-xl-7 d-none d-xl-block">
-									<div class="d-flex gap-4">
-										<!-- Card -->
-										<div class="card bg-transparent">
-											<!-- Image -->
-											<img src="assets/images/portfolio/list/02.jpg" class="card-img" alt="">
-											<!-- Card body -->
-											<div class="card-body px-0 text-start pb-0">
-												<h6><a href="#">Featured Case Study</a></h6>
-												<p class="mb-2 small">Project Management</p>
-												<a class="icon-link icon-link-hover stretched-link mb-0" href="#">Learn more<i class="bi bi-arrow-right"></i> </a>
-											</div>
-										</div>
+			</div>
+		</nav>
+		<!-- Logo Nav END -->
+	</header>
+	<!-- Header END -->
 
-										<!-- Divider line -->
-										<div class="vr ms-2"></div>
-									</div>
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
+
+		<!-- =======================
+Main Banner START -->
+		<section class="pt-8 position-relative overflow-hidden">
+			<!-- SVG Decoration -->
+			<figure class="position-absolute top-0 start-50 translate-middle">
+				<svg class="fill-light opacity-8" width="1990" height="859" viewBox="0 0 1990 859" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M1990 429.5C1990 666.706 1544.52 859 995 859C445.477 859 0 666.706 0 429.5C0 192.294 445.477 0 995 0C1544.52 0 1990 192.294 1990 429.5Z" />
+				</svg>
+			</figure>
+
+			<div class="container pt-lg-4">
+				<div class="row g-4 g-xxl-5">
+					<div class="col-lg-7 position-relative mx-auto text-center">
+
+
+						<!-- Title -->
+						<h1 class="mb-3">Clients</h1>
+						<p>Testimonials from happy Route One clients<br /><br /><br /></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- =======================
+Main Banner END -->
+
+		<!-- =======================
+Stories START -->
+		<section class="pt-6">
+			<div class="container">
+				<div class="row g-4 g-lg-7">
+
+
+					<!-- Review card START -->
+					<div class="col-md-4">
+						<h6 class="card-title mb-3">The Really Useful Group<br /><small>Barney Wragg - Managing
+								Director</small></h6>
+						<div class="card card-img-scale bg-transparent overflow-hidden">
+							<!-- Card image -->
+							<div class="card-img-scale-wrapper rounded">
+								<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img" alt="story-image">
+							</div>
+							<!-- Card body -->
+							<div class="card-body px-0">
+								<p>“Route One understood the key drivers for our relocation to new office premises and
+									the subsequent fit out. A move to radically different space required considerable
+									change management to ensure a smooth transition and Route One's assistance, as
+									Project Managers, was invaluable during this process.”</p>
+							</div>
+						</div>
+					</div>
+					<!-- Review card END -->
+
+					<!<!-- Review card START -->
+						<div class="col-md-4">
+							<h6 class="card-title mb-3">Seven Publishing<br /><small>Mike Potter - Chairman</small></h6>
+							<div class="card card-img-scale bg-transparent overflow-hidden">
+								<!-- Card image -->
+								<div class="card-img-scale-wrapper rounded">
+									<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img"
+										alt="story-image">
 								</div>
-
-								<!-- Index nav links -->
-								<div class="col-xl-5">
-									<ul class="list-unstyled">
-										<li class="dropdown-header"><strong>Case Studies</strong></li>
-										<li> <a class="dropdown-item" href="case-study-1.html">Case Study 1</a> </li>
-										<li> <a class="dropdown-item" href="#">Case Study 2</a> </li>
-										<li> <a class="dropdown-item" href="#">Case Study 3</a> </li>
-										<li> <a class="dropdown-item" href="#">Case Study 4</a> </li>
-									</ul>
+								<!-- Card body -->
+								<div class="card-body px-0">
+									<p>“Seven Publishing seek professionalism and reliability in the management of our
+										fit out projects. Following the successful acquisition of Squared Publishing and
+										the subsequent relocation to Sea Containers House, we retained Tim Brock as the
+										lead Project Manager on the strength of previous projects he has completed on
+										behalf of the Group.”</p>
 								</div>
 							</div>
 						</div>
-					</li>
+						<!-- Review card END -->
 
-					<!-- Nav item -->
-					<li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact us</a> </li>
-				</ul>
-			</div>
-			<!-- Main navbar END -->
+						<!-- Review card START -->
+						<div class="col-md-4">
+							<h6 class="card-title mb-3">HNG<br /><small>Richard Spencer</small></h6>
+							<div class="card card-img-scale bg-transparent overflow-hidden">
+								<!-- Card image -->
+								<div class="card-img-scale-wrapper rounded">
+									<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img"
+										alt="story-image">
+								</div>
+								<!-- Card body -->
+								<div class="card-body px-0">
+									<p>“The scheme was delivered on budget and on a tight time scale from initial
+										concept to project delivery. We would be happy to recommend Route One as
+										designers and project managers on other similar schemes”</p>
+								</div>
+							</div>
+						</div>
+						<!-- Review card END -->
 
-			<!-- Buttons -->
-			<ul class="nav align-items-center dropdown-hover ms-sm-2">
-			
-
-			
-
-				
-
-				<!-- Responsive navbar toggler -->
-				<li class="nav-item">
-					<button class="navbar-toggler ms-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-animation">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</button>
-				</li>	
-			</ul>
-
-		</div>
-	</nav>
-	<!-- Logo Nav END -->
-</header>
-<!-- Header END -->
-
-<!-- **************** MAIN CONTENT START **************** -->
-<main>
-
-<!-- =======================
-Main Banner START -->
-<section class="pt-8 position-relative overflow-hidden">
-	<!-- SVG Decoration -->
-	<figure class="position-absolute top-0 start-50 translate-middle">
-		<svg class="fill-light opacity-8" width="1990" height="859" viewBox="0 0 1990 859" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M1990 429.5C1990 666.706 1544.52 859 995 859C445.477 859 0 666.706 0 429.5C0 192.294 445.477 0 995 0C1544.52 0 1990 192.294 1990 429.5Z"/>
-		</svg>
-	</figure>
-
-	<div class="container pt-lg-4">
-		<div class="row g-4 g-xxl-5">
-			<div class="col-lg-7 position-relative mx-auto text-center">
-			
-
-				<!-- Title -->
-				<h1 class="mb-3">Clients</h1>
-				<p>Testimonials from happy Route One clients<br /><br /><br /></p>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- =======================
-Main Banner END -->
-
-<!-- =======================
-Stories START -->
-<section class="pt-6">
-	<div class="container">
-		<div class="row g-4 g-lg-7">
-		
-
-			<!-- Review card START -->
-			<div class="col-md-4">
-				<h6 class="card-title mb-3">The Really Useful Group<br /><small>Barney Wragg - Managing Director</small></h6>
-				<div class="card card-img-scale bg-transparent overflow-hidden">
-					<!-- Card image -->
-					<div class="card-img-scale-wrapper rounded">       
-						<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img" alt="story-image">
-					</div>
-					<!-- Card body -->
-					<div class="card-body px-0">
-						<p>“Route One understood the key drivers for our relocation to new office premises and the subsequent fit out. A move to radically different space required considerable change management to ensure a smooth transition and Route One's assistance, as Project Managers, was invaluable during this process.”</p>
-					</div>
 				</div>
 			</div>
-			<!-- Review card END -->
-
-			<!<!-- Review card START -->
-			<div class="col-md-4">
-				<h6 class="card-title mb-3">Seven Publishing<br /><small>Mike Potter - Chairman</small></h6>
-				<div class="card card-img-scale bg-transparent overflow-hidden">
-					<!-- Card image -->
-					<div class="card-img-scale-wrapper rounded">       
-						<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img" alt="story-image">
-					</div>
-					<!-- Card body -->
-					<div class="card-body px-0">
-						<p>“Seven Publishing seek professionalism and reliability in the management of our fit out projects. Following the successful acquisition of Squared Publishing and the subsequent relocation to Sea Containers House, we retained Tim Brock as the lead Project Manager on the strength of previous projects he has completed on behalf of the Group.”</p>
-					</div>
-				</div>
-			</div>
-			<!-- Review card END -->
-
-			<!-- Review card START -->
-			<div class="col-md-4">
-				<h6 class="card-title mb-3">HNG<br /><small>Richard Spencer</small></h6>
-				<div class="card card-img-scale bg-transparent overflow-hidden">
-					<!-- Card image -->
-					<div class="card-img-scale-wrapper rounded">       
-						<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img" alt="story-image">
-					</div>
-					<!-- Card body -->
-					<div class="card-body px-0">
-						<p>“The scheme was delivered on budget and on a tight time scale from initial concept to project delivery.  We would be happy to recommend Route One as designers and project managers on other similar schemes”</p>
-					</div>
-				</div>
-			</div>
-			<!-- Review card END -->
-
-		</div>
-	</div>
-</section>
-<!-- =======================
+		</section>
+		<!-- =======================
 Stories END -->
 
-<!-- =======================
+		<!-- =======================
 Stories 2 START -->
-<section class="pt-0">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 mx-auto">
-				<!-- Slider START -->
-				<div class="swiper mb-4"
-				data-swiper-options='{
+		<section class="pt-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
+						<!-- Slider START -->
+						<div class="swiper mb-4" data-swiper-options='{
 					"loop": true, 
 					"slidesPerView": 1, 
 					"spaceBetween": 80, 
@@ -352,217 +352,244 @@ Stories 2 START -->
 						"clickable":"true"
 					}}'>
 
-					<!-- Slider items -->
-					<div class="swiper-wrapper">
+							<!-- Slider items -->
+							<div class="swiper-wrapper">
 
-						<!-- Item -->
-						<div class="swiper-slide text-center">
-							<!-- Client img -->
-							<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px" alt="client-img"></div>
-							<q class="fs-4 fw-normal heading-color">Route One understood the key drivers for our relocation to new office premises and the subsequent fit out. A move to radically different space required considerable change management to ensure a smooth transition and Route One's assistance, as Project Managers, was invaluable during this process.</q>
-							<!-- Avatar -->
-							<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
-								<!-- Avatar -->
-								<div class="avatar flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="avatar">
+								<!-- Item -->
+								<div class="swiper-slide text-center">
+									<!-- Client img -->
+									<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px"
+											alt="client-img"></div>
+									<q class="fs-4 fw-normal heading-color">Route One understood the key drivers for our
+										relocation to new office premises and the subsequent fit out. A move to
+										radically different space required considerable change management to ensure a
+										smooth transition and Route One's assistance, as Project Managers, was
+										invaluable during this process.</q>
+									<!-- Avatar -->
+									<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
+										<!-- Avatar -->
+										<div class="avatar flex-shrink-0">
+											<img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg"
+												alt="avatar">
+										</div>
+										<!-- Info -->
+										<div class="ms-2 mt-2 mt-sm-0">
+											<h6 class="mb-0">Barney Wragg</h6>
+											<p class="mb-0 small">Managing Director of The Really Useful Group</p>
+										</div>
+									</div>
 								</div>
-								<!-- Info -->
-								<div class="ms-2 mt-2 mt-sm-0">
-									<h6 class="mb-0">Barney Wragg</h6>
-									<p class="mb-0 small">Managing Director of The Really Useful Group</p>
+
+								<!-- Item -->
+								<div class="swiper-slide text-center">
+									<!-- Client img -->
+									<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px"
+											alt="client-img"></div>
+									<q class="fs-4 fw-normal heading-color">Seven Publishing seek professionalism and
+										reliability in the management of our fit out projects. Following the successful
+										acquisition of Squared Publishing and the subsequent relocation to Sea
+										Containers House, we retained Tim Brock as the lead Project Manager on the
+										strength of previous projects he has completed on behalf of the Group.</q>
+									<!-- Avatar -->
+									<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
+										<!-- Avatar -->
+										<div class="avatar flex-shrink-0">
+											<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg"
+												alt="avatar">
+										</div>
+										<!-- Info -->
+										<div class="ms-2 mt-2 mt-sm-0">
+											<h6 class="mb-0">Mike Potter</h6>
+											<p class="mb-0 small">Chairman of Seven Publishing</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Item -->
+								<div class="swiper-slide text-center">
+									<!-- Client img -->
+									<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px"
+											alt="client-img"></div>
+									<q class="fs-4 fw-normal heading-color">The scheme was delivered on budget and on a
+										tight time scale from initial concept to project delivery. We would be happy to
+										recommend Route One as designers and project managers on other similar
+										schemes</q>
+									<!-- Avatar -->
+									<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
+										<!-- Avatar -->
+										<div class="avatar flex-shrink-0">
+											<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg"
+												alt="avatar">
+										</div>
+										<!-- Info -->
+										<div class="ms-2 mt-2 mt-sm-0">
+											<h6 class="mb-0">Richard Spencer</h6>
+											<p class="mb-0 small">HNG</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- Slider END -->
 
-						<!-- Item -->
-						<div class="swiper-slide text-center">
-							<!-- Client img -->
-							<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px" alt="client-img"></div>
-							<q class="fs-4 fw-normal heading-color">Seven Publishing seek professionalism and reliability in the management of our fit out projects. Following the successful acquisition of Squared Publishing and the subsequent relocation to Sea Containers House, we retained Tim Brock as the lead Project Manager on the strength of previous projects he has completed on behalf of the Group.</q>
-							<!-- Avatar -->
-							<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
-								<!-- Avatar -->
-								<div class="avatar flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2 mt-2 mt-sm-0">
-									<h6 class="mb-0">Mike Potter</h6>
-									<p class="mb-0 small">Chairman of Seven Publishing</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- Item -->
-						<div class="swiper-slide text-center">
-							<!-- Client img -->
-							<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px" alt="client-img"></div>
-							<q class="fs-4 fw-normal heading-color">The scheme was delivered on budget and on a tight time scale from initial concept to project delivery. We would be happy to recommend Route One as designers and project managers on other similar schemes</q>
-							<!-- Avatar -->
-							<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
-								<!-- Avatar -->
-								<div class="avatar flex-shrink-0">
-									<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
-								</div>
-								<!-- Info -->
-								<div class="ms-2 mt-2 mt-sm-0">
-									<h6 class="mb-0">Richard Spencer</h6>
-									<p class="mb-0 small">HNG</p>
-								</div>
-							</div>
-						</div>
+						<!-- Add pagination and navigation elements here -->
+						<div class="swiper-pagination swiper-pagination-primary position-relative"></div>
 					</div>
-				</div>	
-				<!-- Slider END -->
-
-				<!-- Add pagination and navigation elements here -->
-				<div class="swiper-pagination swiper-pagination-primary position-relative"></div>
+				</div> <!-- Row END -->
 			</div>
-		</div> <!-- Row END -->
-	</div>
-</section>
-<!-- =======================
+		</section>
+		<!-- =======================
 Stories 2 END -->
 
 
 
-</main>
-<!-- **************** MAIN CONTENT END **************** -->
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
 
-<!-- =======================
+	<!-- =======================
 Footer START -->
-<footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
+	<footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
 
-	<div class="container position-relative mt-5">
-		<!-- Widgets -->
-		<div class="row g-4">
-	
+		<div class="container position-relative mt-5">
+			<!-- Widgets -->
+			<div class="row g-4">
 
-			<!-- Widget START -->
-			<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-				<h6 class="mb-2 mb-md-4">Services</h6>
-				<ul class="nav flex-column">
-					<li class="nav-item"><a class="nav-link" href="#">Project Management</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Dilapidations</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Defects Analysis</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Building Surveys</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Party Walls</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Measured Surveys</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Project Monitoring</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Other Services</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Specalist Services</a></li>
-
-				</ul>
-			</div>
-			<!-- Widget END -->
-
-			<!-- Widget START -->
-			<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-				<h6 class="mb-2 mb-md-4">Clients</h6>
-				<ul class="nav flex-column">
-					<li class="nav-item"><a class="nav-link" href="#">Client Testimonials</a></li>
-				</ul>
-			</div>
-			<!-- Widget END -->
 
 				<!-- Widget START -->
-			<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-				<h6 class="mb-2 mb-md-4">Case Studies</h6>
-				<ul class="nav flex-column">
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 1</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 2</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 3</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Case Study 4</a></li>
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+					<h6 class="mb-2 mb-md-4">Services</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#">Project Management</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Dilapidations</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Defects Analysis</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Building Surveys</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Party Walls</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Measured Surveys</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Project Monitoring</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Other Services</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Specalist Services</a></li>
+
+					</ul>
+				</div>
+				<!-- Widget END -->
+
+				<!-- Widget START -->
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+					<h6 class="mb-2 mb-md-4">Clients</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#">Client Testimonials</a></li>
+					</ul>
+				</div>
+				<!-- Widget END -->
+
+				<!-- Widget START -->
+				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
+					<h6 class="mb-2 mb-md-4">Case Studies</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 1</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 2</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 3</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Case Study 4</a></li>
+					</ul>
+				</div>
+				<!-- Widget END -->
+			</div>
+
+			<!-- Divider -->
+			<hr class="opacity-1 my-5 my-sm-6">
+
+			<!-- Contact detail -->
+			<div class="row g-4 align-items-center">
+				<!-- Title -->
+				<div class="col-xl-3 text-lg-center text-xl-start mb-4 mb-xl-0">
+					<h5 class="mb-1">Contact Us</h5>
+					<p class="mb-0">We look forward to hearing from you</p>
+				</div>
+
+				<!-- Mobile number -->
+				<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+					<div class="position-relative d-flex align-items-center">
+						<div class="icon-lg bg-body rounded-circle flex-shrink-0">
+							<i class="bi bi-telephone heading-color"></i>
+						</div>
+						<div class="nav flex-column ps-3">
+							<div class="small text-body-secondary">Give us a call</div>
+							<p class="fw-semibold mt-1 mb-0"><a href="#"
+									class="heading-color text-primary-hover stretched-link p-0">+44 (0)207 828 5904</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Email -->
+				<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+					<div class="position-relative d-flex align-items-center">
+						<div class="icon-lg bg-body rounded-circle flex-shrink-0">
+							<i class="bi bi-envelope heading-color"></i>
+						</div>
+						<div class="nav flex-column ps-3">
+							<div class="small text-body-secondary">Send us an email</div>
+							<p class="fw-semibold mt-1 mb-0"><a href="#"
+									class="heading-color text-primary-hover stretched-link p-0">info@routeoneconsult.com</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Address -->
+				<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
+					<div class="position-relative d-flex align-items-center">
+						<div class="icon-lg bg-body rounded-circle flex-shrink-0">
+							<i class="bi bi-geo-alt heading-color"></i>
+						</div>
+						<div class="nav flex-column ps-3">
+							<div class="small text-body-secondary">Visit us at</div>
+							<p class="fw-semibold heading-color mt-1 mb-0">19 Park Street<br />Croydon CR0 1YD</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Divider -->
+			<hr class="opacity-1 mt-6 mb-0">
+
+			<!-- Bottom footer -->
+			<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
+				<!-- copyright text -->
+				<div class="text-body mb-3 mb-md-0"> Copyright ©2025 Route One Building Consultancy Ltd</div>
+
+				<!-- Social links -->
+				<ul class="list-inline mb-0">
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-instagram lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-twitter lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
+					<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i
+								class="fab fa-fw fa-youtube lh-base"></i></a> </li>
 				</ul>
 			</div>
-			<!-- Widget END -->
+
 		</div>
-
-		<!-- Divider -->
-		<hr class="opacity-1 my-5 my-sm-6">
-
-		<!-- Contact detail -->
-		<div class="row g-4 align-items-center">
-			<!-- Title -->
-			<div class="col-xl-3 text-lg-center text-xl-start mb-4 mb-xl-0">
-				<h5 class="mb-1">Contact Us</h5>
-				<p class="mb-0">We look forward to hearing from you</p>
-			</div>
-
-			<!-- Mobile number -->
-			<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
-				<div class="position-relative d-flex align-items-center">
-					<div class="icon-lg bg-body rounded-circle flex-shrink-0">
-						<i class="bi bi-telephone heading-color"></i>
-					</div>
-					<div class="nav flex-column ps-3">
-						<div class="small text-body-secondary">Give us a call</div>
-						<p class="fw-semibold mt-1 mb-0"><a href="#" class="heading-color text-primary-hover stretched-link p-0">+44 (0)207 828 5904</a></p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Email -->
-			<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
-				<div class="position-relative d-flex align-items-center">
-					<div class="icon-lg bg-body rounded-circle flex-shrink-0">
-						<i class="bi bi-envelope heading-color"></i>
-					</div>
-					<div class="nav flex-column ps-3">
-						<div class="small text-body-secondary">Send us an email</div>
-						<p class="fw-semibold mt-1 mb-0"><a href="#" class="heading-color text-primary-hover stretched-link p-0">info@routeoneconsult.com</a></p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Address -->
-			<div class="col-sm-6 col-md-4 col-xl-3 d-flex justify-content-md-center">
-				<div class="position-relative d-flex align-items-center">
-					<div class="icon-lg bg-body rounded-circle flex-shrink-0">
-						<i class="bi bi-geo-alt heading-color"></i>
-					</div>
-					<div class="nav flex-column ps-3">
-						<div class="small text-body-secondary">Visit us at</div>
-						<p class="fw-semibold heading-color mt-1 mb-0">19 Park Street<br />Croydon CR0 1YD</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Divider -->
-		<hr class="opacity-1 mt-6 mb-0">
-
-		<!-- Bottom footer -->
-		<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-4">
-			<!-- copyright text -->
-			<div class="text-body mb-3 mb-md-0"> Copyright ©2025 Route One Building Consultancy Ltd</div>
-
-			<!-- Social links -->
-			<ul class="list-inline mb-0">
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-facebook-f lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-instagram lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-twitter lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a> </li>
-				<li class="list-inline-item"> <a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-youtube lh-base"></i></a> </li>
-			</ul>
-		</div>
-		
-	</div>
-</footer>
-<!-- =======================
+	</footer>
+	<!-- =======================
 Footer END -->
 
-<!-- Back to top -->
-<div class="back-top"></div>
+	<!-- Back to top -->
+	<div class="back-top"></div>
 
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<!--Vendors-->
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<!--Vendors-->
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- ThemeFunctions -->
-<script src="assets/js/functions.js"></script>
+	<!-- ThemeFunctions -->
+	<script src="assets/js/functions.js"></script>
 
 </body>
+
 </html>
