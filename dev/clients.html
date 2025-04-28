@@ -136,7 +136,7 @@
 <body>
 
 	<!-- Header START -->
-	<header class="header-sticky header-absolute" data-bs-theme="dark">
+	<header class="header-sticky header-absolute bg-dark" data-bs-theme="dark">
 		<!-- Logo Nav START -->
 		<nav class="navbar navbar-expand-xl px-lg-5">
 			<div class="container-fluid">
@@ -232,214 +232,185 @@
 	<!-- **************** MAIN CONTENT START **************** -->
 	<main>
 
+
+
 		<!-- =======================
-Main Banner START -->
-		<section class="pt-8 position-relative overflow-hidden">
-			<!-- SVG Decoration -->
-			<figure class="position-absolute top-0 start-50 translate-middle">
-				<svg class="fill-light opacity-8" width="1990" height="859" viewBox="0 0 1990 859" fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M1990 429.5C1990 666.706 1544.52 859 995 859C445.477 859 0 666.706 0 429.5C0 192.294 445.477 0 995 0C1544.52 0 1990 192.294 1990 429.5Z" />
-				</svg>
-			</figure>
+Main hero START -->
 
-			<div class="container pt-lg-4">
-				<div class="row g-4 g-xxl-5">
-					<div class="col-lg-7 position-relative mx-auto text-center">
+		<section class="bg-light pt-lg-4 pb-0" data-bs-theme="light" style="background-color: #FFF;">
+			<div class="container-fluid pt-4" style="background-color: #FFF;">
 
 
-						<!-- Title -->
-						<h1 class="mb-3">Clients</h1>
-						<p>Testimonials from happy Route One clients<br /><br /><br /></p>
+				<!-- Tabs -->
+				<div class="d-lg-flex align-items-center justify-content-center mt-8">
+					<h6 class="mb-lg-0 me-3">Show:</h6>
+					<div class="grid-menu" data-target=".filter-container">
+						<ul class="nav nav-pills nav-pills-primary-soft gap-2">
+							<li class="nav-item">
+								<a class="nav-link active" data-filter="*">All Clients</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-filter=".not-for-profit">Education &amp Non-Profit</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-filter=".retail">Fashion &amp Retail</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-filter=".real-estate">Finance & Real Estate</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-filter=".media">Media &amp; Entertainment</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- =======================
-Main Banner END -->
 
-		<!-- =======================
-Stories START -->
-		<section class="pt-6">
-			<div class="container">
-				<div class="row g-4 g-lg-7">
+				<!-- Portfolio item START -->
+				<div class="row g-4 filter-container mt-0 pb-6" data-isotope='{"layoutMode": "masonry"}'>
 
 
-					<!-- Review card START -->
-					<div class="col-md-4">
-						<h6 class="card-title mb-3">The Really Useful Group<br /><small>Barney Wragg - Managing
-								Director</small></h6>
-						<div class="card card-img-scale bg-transparent overflow-hidden">
-							<!-- Card image -->
-							<div class="card-img-scale-wrapper rounded">
-								<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img" alt="story-image">
-							</div>
-							<!-- Card body -->
-							<div class="card-body px-0">
-								<p>“Route One understood the key drivers for our relocation to new office premises and
-									the subsequent fit out. A move to radically different space required considerable
-									change management to ensure a smooth transition and Route One's assistance, as
-									Project Managers, was invaluable during this process.”</p>
-							</div>
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item marketing real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/anglesea-capital_400x400.png" alt="Anglesea Capital">
 						</div>
 					</div>
-					<!-- Review card END -->
 
-					<!<!-- Review card START -->
-						<div class="col-md-4">
-							<h6 class="card-title mb-3">Seven Publishing<br /><small>Mike Potter - Chairman</small></h6>
-							<div class="card card-img-scale bg-transparent overflow-hidden">
-								<!-- Card image -->
-								<div class="card-img-scale-wrapper rounded">
-									<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img"
-										alt="story-image">
-								</div>
-								<!-- Card body -->
-								<div class="card-body px-0">
-									<p>“Seven Publishing seek professionalism and reliability in the management of our
-										fit out projects. Following the successful acquisition of Squared Publishing and
-										the subsequent relocation to Sea Containers House, we retained Tim Brock as the
-										lead Project Manager on the strength of previous projects he has completed on
-										behalf of the Group.”</p>
-								</div>
-							</div>
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item brand real-estate not-for-profit">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/architects-benevolent-society_400x400.png"
+								alt="Architects Benevolent Society">
 						</div>
-						<!-- Review card END -->
+					</div>
 
-						<!-- Review card START -->
-						<div class="col-md-4">
-							<h6 class="card-title mb-3">HNG<br /><small>Richard Spencer</small></h6>
-							<div class="card card-img-scale bg-transparent overflow-hidden">
-								<!-- Card image -->
-								<div class="card-img-scale-wrapper rounded">
-									<img src="https://dummyimage.com/700x300/f8f8f8/333" class="card-img"
-										alt="story-image">
-								</div>
-								<!-- Card body -->
-								<div class="card-body px-0">
-									<p>“The scheme was delivered on budget and on a tight time scale from initial
-										concept to project delivery. We would be happy to recommend Route One as
-										designers and project managers on other similar schemes”</p>
-								</div>
-							</div>
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item media">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/banijay-uk_400x400.png" alt="Banijay">
 						</div>
-						<!-- Review card END -->
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/barclays_400x400.png" alt="Barclays">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/capital-and-regional_400x400.png" alt="Capital &amp; Regional">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/cbre_400x400.png" alt="CBRE">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/e&m_400x400.png" alt="Estates &amp; Management">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/hyatt-design_400x400.png" alt="Hyatt Design">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/insurance-claim-solutions_400x400.png" alt="Insurance Claim Solutions">
+						</div>
+					</div>
+
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item ui real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/knotel_400x400.png" alt="Knotel">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/lasalle_400x400.png" alt="LaSalle">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item retail">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/matches_400x400.png" alt="Matches">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item media">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/netflix_400x400.png" alt="Netflix">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item real-estate">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/the-holdsworth-group_400x400.png" alt="The Holdsworth Group">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item not-for-profit">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/united-response_400x400.png" alt="United Response">
+						</div>
+					</div>
+
+					<!-- Item -->
+					<div class="col-sm-6 col-lg-2 grid-item not-for-profit">
+						<div class="card bg-body">
+							<!-- Card Image -->
+							<img src="assets/logos/university-of-west-london_400x400.png" alt="University of West London">
+						</div>
+					</div>
+
+
+
 
 				</div>
+				<!-- Portfolio item END -->
+
+
+
 			</div>
 		</section>
 		<!-- =======================
-Stories END -->
-
-		<!-- =======================
-Stories 2 START -->
-		<section class="pt-0">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-10 mx-auto">
-						<!-- Slider START -->
-						<div class="swiper mb-4" data-swiper-options='{
-					"loop": true, 
-					"slidesPerView": 1, 
-					"spaceBetween": 80, 
-					"autoplay":{
-						"delay": 4000, 
-						"disableOnInteraction": false
-					},
-					"pagination":{
-						"el":".swiper-pagination",
-						"clickable":"true"
-					}}'>
-
-							<!-- Slider items -->
-							<div class="swiper-wrapper">
-
-								<!-- Item -->
-								<div class="swiper-slide text-center">
-									<!-- Client img -->
-									<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px"
-											alt="client-img"></div>
-									<q class="fs-4 fw-normal heading-color">Route One understood the key drivers for our
-										relocation to new office premises and the subsequent fit out. A move to
-										radically different space required considerable change management to ensure a
-										smooth transition and Route One's assistance, as Project Managers, was
-										invaluable during this process.</q>
-									<!-- Avatar -->
-									<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
-										<!-- Avatar -->
-										<div class="avatar flex-shrink-0">
-											<img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg"
-												alt="avatar">
-										</div>
-										<!-- Info -->
-										<div class="ms-2 mt-2 mt-sm-0">
-											<h6 class="mb-0">Barney Wragg</h6>
-											<p class="mb-0 small">Managing Director of The Really Useful Group</p>
-										</div>
-									</div>
-								</div>
-
-								<!-- Item -->
-								<div class="swiper-slide text-center">
-									<!-- Client img -->
-									<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px"
-											alt="client-img"></div>
-									<q class="fs-4 fw-normal heading-color">Seven Publishing seek professionalism and
-										reliability in the management of our fit out projects. Following the successful
-										acquisition of Squared Publishing and the subsequent relocation to Sea
-										Containers House, we retained Tim Brock as the lead Project Manager on the
-										strength of previous projects he has completed on behalf of the Group.</q>
-									<!-- Avatar -->
-									<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
-										<!-- Avatar -->
-										<div class="avatar flex-shrink-0">
-											<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg"
-												alt="avatar">
-										</div>
-										<!-- Info -->
-										<div class="ms-2 mt-2 mt-sm-0">
-											<h6 class="mb-0">Mike Potter</h6>
-											<p class="mb-0 small">Chairman of Seven Publishing</p>
-										</div>
-									</div>
-								</div>
-
-								<!-- Item -->
-								<div class="swiper-slide text-center">
-									<!-- Client img -->
-									<div class="mb-4"><img src="https://dummyimage.com/135x40/f8f8f8/333" class="h-40px"
-											alt="client-img"></div>
-									<q class="fs-4 fw-normal heading-color">The scheme was delivered on budget and on a
-										tight time scale from initial concept to project delivery. We would be happy to
-										recommend Route One as designers and project managers on other similar
-										schemes</q>
-									<!-- Avatar -->
-									<div class="d-flex justify-content-center align-items-center text-start mt-4 mb-5">
-										<!-- Avatar -->
-										<div class="avatar flex-shrink-0">
-											<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg"
-												alt="avatar">
-										</div>
-										<!-- Info -->
-										<div class="ms-2 mt-2 mt-sm-0">
-											<h6 class="mb-0">Richard Spencer</h6>
-											<p class="mb-0 small">HNG</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Slider END -->
-
-						<!-- Add pagination and navigation elements here -->
-						<div class="swiper-pagination swiper-pagination-primary position-relative"></div>
-					</div>
-				</div> <!-- Row END -->
-			</div>
-		</section>
-		<!-- =======================
-Stories 2 END -->
+Main hero END -->
 
 
 
@@ -450,54 +421,10 @@ Stories 2 END -->
 Footer START -->
 	<footer class="bg-dark position-relative overflow-hidden pt-6" data-bs-theme="dark">
 
-		<div class="container position-relative mt-5">
-			<!-- Widgets -->
-			<div class="row g-4">
+		<div class="container position-relative mt-0">
+			
 
-
-				<!-- Widget START -->
-				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-					<h6 class="mb-2 mb-md-4">Services</h6>
-					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link" href="#">Project Management</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Dilapidations</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Defects Analysis</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Building Surveys</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Party Walls</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Measured Surveys</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Project Monitoring</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Other Services</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Specalist Services</a></li>
-
-					</ul>
-				</div>
-				<!-- Widget END -->
-
-				<!-- Widget START -->
-				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-					<h6 class="mb-2 mb-md-4">Clients</h6>
-					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link" href="#">Client Testimonials</a></li>
-					</ul>
-				</div>
-				<!-- Widget END -->
-
-				<!-- Widget START -->
-				<div class="col-6 col-md-4 col-lg-3 col-xl-2">
-					<h6 class="mb-2 mb-md-4">Case Studies</h6>
-					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link" href="#">Case Study 1</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Case Study 2</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Case Study 3</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Case Study 4</a></li>
-					</ul>
-				</div>
-				<!-- Widget END -->
-			</div>
-
-			<!-- Divider -->
-			<hr class="opacity-1 my-5 my-sm-6">
-
+			
 			<!-- Contact detail -->
 			<div class="row g-4 align-items-center">
 				<!-- Title -->
@@ -585,7 +512,8 @@ Footer END -->
 	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!--Vendors-->
-	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/imagesLoaded/imagesloaded.pkgd.min.js"></script>
 
 	<!-- ThemeFunctions -->
 	<script src="assets/js/functions.js"></script>
